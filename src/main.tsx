@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/react";
+// import ReactGA from "react-ga4";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
@@ -9,6 +10,8 @@ Sentry.init({
   enabled: import.meta.env.MODE === "production",
   integrations: [],
 });
+
+// ReactGA.initialize(import.meta.env.VITE_GA_TRACKING_ID);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
