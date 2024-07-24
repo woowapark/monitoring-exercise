@@ -1,5 +1,4 @@
 import { Component, ErrorInfo } from "react";
-import * as Sentry from "@sentry/react";
 import React from "react";
 
 interface ErrorBoundaryProps {
@@ -25,7 +24,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    Sentry.captureException(error, { extra: { errorInfo } });
+    // TODO: Sentry에 에러를 캡처하는 코드를 작성하세요.
   }
 
   render() {
